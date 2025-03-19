@@ -1,0 +1,173 @@
+body {
+
+  background: #db9ec6;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  padding: 100px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.profile {
+  max-width: 50%;
+}
+
+.highlight {
+  color: #ff69b4;
+}
+
+.social-links a {
+  margin-right: 10px;
+  font-weight: bold;
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.avatar img {
+  animation: jump 0.5s infinite alternate ease-in-out;
+}
+.avatar img {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px dotted #ff69b4;
+}
+.about {
+  background:  #ebcbc7;
+  padding: 50px;
+}
+
+.projects {
+  background:  #ffffff;
+  padding: 50px;
+}
+
+#contact {
+  background: #ebcbc7;
+  padding: 50px;
+}
+.name{
+  font-size: xx-large;
+font-family: serif;
+}
+
+/* Styling for skill item images */
+.skill-img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-item:hover .skill-img {
+  transform: scale(1.1); /* Zoom in effect */
+  opacity: 0.8; /* Slight transparency effect */
+}
+
+.skill-item {
+  text-align: center;
+}
+
+.skill-item img {
+  border-radius: 8px;
+}
+.social-links {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* CSS for Projects section */
+.projects {
+  padding: 2rem;
+}
+
+/* Title centered at the top */
+.projects h2 {
+  text-align: center;
+}
+
+/* Card styles */
+.project-card {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.project-card .image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card img {
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+/* Hover effect to pop up */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Card image hover effect */
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Description fade effect */
+.project-card p {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover p {
+  opacity: 1;
+}
+
+/* Link hover effect */
+.project-card a {
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #1D4ED8; /* Adjust for blue hover */
+}
+@layer utilities {
+  .hover\:rotate-3d:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+  }
+}
